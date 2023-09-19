@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ArrayListMultiSet<T> {
+public class ArrayListMultiSet<T> implements MultiSet<T>{
 
         private List<T> list;
 
@@ -25,7 +25,7 @@ public class ArrayListMultiSet<T> {
             return list.contains(item);
         }
 
-        public boolean isEmpty() {
+        public boolean is_empty() {
             return list.isEmpty();
         }
 
