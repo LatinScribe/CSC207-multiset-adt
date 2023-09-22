@@ -62,4 +62,15 @@ public class LinkListMultiSet<T> implements MultiSet<T>{
     public int size() {
         return size;
     }
+
+    private static class Node<T> {
+        public T item;
+        public Node<T> next;
+        Node(T item) {
+            this.item = item;
+            next = null;
+        }
+    }
 }
+
+
