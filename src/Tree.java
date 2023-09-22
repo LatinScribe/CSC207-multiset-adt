@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class Tree<T>{
     /*
     A recursive tree data structure, which provides services required of the
@@ -61,8 +64,7 @@ public class Tree<T>{
         if (this.is_empty()){
             return "";
         } else {
-            // TODO: Fix the to string
-            String s = repeat(depth, "  ") + toString(this.root) + "\n";
+            String s = repeat(depth, "  ") + this.root.toString() + "\n";
             for (Tree subtree:
                     this.subtrees) {
                 s += subtree.String_indented(depth + 1);
@@ -79,8 +81,7 @@ public class Tree<T>{
         if (this.is_empty()){
             return "";
         } else {
-            // TODO: Fix the to string
-            String s = repeat(depth, "  ") + toString(this.root) + "\n";
+            String s = repeat(depth, "  ") + this.root.toString() + "\n";
             for (Tree subtree:
                     this.subtrees) {
                 s += subtree.String_indented(depth + 1);
@@ -94,9 +95,20 @@ public class Tree<T>{
         return new String(new char[count]).replace("\0", with);
     }
 
+    public float average() {
+        return (float)0.0;
+    }
+
+    private float average_helper() {
+        return (float)0.0;
+    }
 
     public boolean __contains__(T item) {
         return false;
+    }
+
+    public List<?> leaves() {
+        return this.leaves();
     }
 
     //Mutating
@@ -105,8 +117,20 @@ public class Tree<T>{
         return false;
     }
 
+    private void delete_root() {
+
+    }
+
+    private T extract_leaf() {
+        return root;
+    }
+
     public void insert(T item) {
 
+    }
+
+    public boolean insert_child(T item, T parent ) {
+        return true;
     }
 
     public static void main(String[] args) {
